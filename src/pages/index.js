@@ -8,6 +8,9 @@ import Intro from '@/components/Intro/Intro';
 import Abstract from '@/components/Abstract/Abstract';
 import Experiment from '@/components/Experiment/Experiment';
 import License from '@/components/License/License';
+import SensorPlatform from '@/components/SensorPlatform/SensorPlatform';
+import DatasetTabs from '@/components/Dataset/Dataset';
+import Methodology from '@/components/Methodology/Methodology';
 
 export default function Home() {
   useEffect(() => {
@@ -39,12 +42,18 @@ export default function Home() {
       <Intro />
       <Abstract />
 
+      <DatasetTabs />
+
+
+
       {/* Mục 1 */}
 
-      {/* Mục 4 */}
+      {/* Mục 4 - methodology*/}
+      <Methodology />
 
       {/* mục 5 */}
-      <Experiment />
+      {/* <Experiment /> */}
+      <SensorPlatform />
 
       <RelatedLink />
       <License />
