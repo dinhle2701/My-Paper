@@ -21,10 +21,10 @@ const Header = () => {
 
                 <div className="educate">
                     <div className="text-center mt-4 text-sm text-gray-600 leading-relaxed">
-                        <p><sup>a</sup> Faculty of Information Science and Engineering, University of Information Technology, Ho Chi Minh City, 700000, Vietnam</p>
-                        <p><sup>b</sup> Faculty of Computer Networks and Communications, University of Information Technology, Ho Chi Minh City, 700000, Vietnam</p>
-                        <p><sup>c</sup> Vietnam National University Ho Chi Minh City, Ho Chi Minh City, 700000, Vietnam</p>
-                        <p><sup>d</sup> Ho Chi Minh City University of Industry and Trade, Vietnam, Ho Chi Minh City, 700000, Vietnam</p>
+                        <i><p><sup>a</sup> Faculty of Information Science and Engineering, University of Information Technology, Ho Chi Minh City, 700000, Vietnam</p>
+                            <p><sup>b</sup> Faculty of Computer Networks and Communications, University of Information Technology, Ho Chi Minh City, 700000, Vietnam</p>
+                            <p><sup>c</sup> Vietnam National University Ho Chi Minh City, Ho Chi Minh City, 700000, Vietnam</p>
+                            <p><sup>d</sup> Ho Chi Minh City University of Industry and Trade, Vietnam, Ho Chi Minh City, 700000, Vietnam</p></i>
                     </div>
                 </div>
 
