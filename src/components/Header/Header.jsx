@@ -56,7 +56,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="credibility">
-                <span>Accepted by NeurIPS 2023 Datasets and Benchmarks Track</span>
+                <span>Awaiting acceptance from Ad Hoc Networks journal.</span>
             </div>
         </div>
     )
