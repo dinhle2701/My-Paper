@@ -1,6 +1,12 @@
 import React from 'react'
 import documents from '@/data/documents'
 
+import { FaYoutube } from "react-icons/fa";
+import { FaRegImages } from "react-icons/fa";
+import { SiArxiv } from "react-icons/si";
+import { FaRegFilePdf } from "react-icons/fa";
+
+
 const Header = () => {
     const doc = documents[0]
 
@@ -28,11 +34,25 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="link-related mt-12 mb-18">
-                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>Paper</button>
-                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>arXiv</button>
-                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>Video</button>
-                    <button className='bg-black text-sm text-white border-6 rounded-4xl px-5 py-2'>Data</button>
+                <div className="link-related mt-12 mb-16 flex flex-wrap justify-center gap-4">
+                    {[
+                        { label: "Paper", icon: <FaRegFilePdf /> },
+                        { label: "arXiv", icon: <SiArxiv /> },
+                        { label: "Video", icon: <FaYoutube /> },
+                        { label: "Data", icon: <FaRegImages /> },
+                    ].map((item, index) => (
+                        <button
+                            key={index}
+                            className="flex items-center justify-center gap-2 w-[130px] h-[44px] 
+                 bg-black text-white text-sm font-medium 
+                 rounded-full transition 
+                 hover:bg-gray-800 hover:cursor-pointer"
+                        >
+                            {item.icon}
+                            <span>{item.label}</span>
+                        </button>
+                    ))}
+
                 </div>
             </div>
             <div className="credibility">
