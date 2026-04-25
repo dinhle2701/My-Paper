@@ -41,22 +41,24 @@ const datasets = [
         id: 2,
         name: "Counting People RGB",
         cv: [
-            `${base}/datasets/rgb/cv/1.mp4`,
-            `${base}/datasets/rgb/cv/2.mp4`,
-            `${base}/datasets/rgb/cv/3.mp4`,
-            `${base}/datasets/rgb/cv/4.mp4`,
-            `${base}/datasets/rgb/cv/5.mp4`,
-            `${base}/datasets/rgb/cv/6.mp4`,
-            `${base}/datasets/rgb/cv/7.mp4`,
+            `${base}/datasets/Counting People RGB/cv/zero-people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/one-people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/two-people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/three-people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/four-people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/five-people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/six-people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/seven-people.mp4`,
         ],
         csi: [
-            `${base}/datasets/rgb/csi/1.mp4`,
-            `${base}/datasets/rgb/csi/2.mp4`,
-            `${base}/datasets/rgb/csi/3.mp4`,
-            `${base}/datasets/rgb/csi/4.mp4`,
-            `${base}/datasets/rgb/csi/5.mp4`,
-            `${base}/datasets/rgb/csi/6.mp4`,
-            `${base}/datasets/rgb/csi/7.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_0people.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_1people.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_2people.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_3people.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_4people.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_5people.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_6people.mp4`,
+            `${base}/datasets/Counting People RGB/csi/csi_7people.mp4`,
         ],
     },
 
@@ -157,11 +159,7 @@ const DatasetTabs = () => {
 
                                 <div className="space-y-5">
                                     {current.cv.map((video, index) => (
-                                        <div key={index}>
-                                            <p className="mb-2 font-medium text-sm text-center">
-                                                {index + 0} People
-                                            </p>
-
+                                        <div key={index} className="mb-12">
                                             <video
                                                 ref={(el) => (videoRefs.current[index] = el)}
                                                 src={video}
@@ -173,6 +171,9 @@ const DatasetTabs = () => {
                                                 preload="auto"
                                                 className="w-full h-[220px] object-cover rounded-lg shadow bg-black"
                                             />
+                                            <p className="mb-2 font-medium text-sm text-center">
+                                                {index + 0} Volunteers
+                                            </p>
                                         </div>
                                     ))}
                                 </div>
@@ -184,11 +185,7 @@ const DatasetTabs = () => {
 
                                 <div className="space-y-5">
                                     {current.csi.map((video, index) => (
-                                        <div key={index}>
-                                            <p className="mb-2 font-medium text-sm text-center">
-                                                {index + 0} People
-                                            </p>
-
+                                        <div key={index} className="mb-12">
                                             <video
                                                 ref={(el) => (videoRefs.current[index + 7] = el)}
                                                 src={video}
@@ -200,6 +197,10 @@ const DatasetTabs = () => {
                                                 preload="auto"
                                                 className="w-full h-[220px] object-cover rounded-lg shadow bg-black"
                                             />
+
+                                            <p className="mb-2 font-medium text-sm text-center">
+                                                {index + 0} Volunteers
+                                            </p>
                                         </div>
                                     ))}
                                 </div>

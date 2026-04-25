@@ -11,6 +11,7 @@ import License from '@/components/License/License';
 import SensorPlatform from '@/components/SensorPlatform/SensorPlatform';
 import DatasetTabs from '@/components/Dataset/Dataset';
 import Methodology from '@/components/Methodology/Methodology';
+import HumanResult from '@/components/HumanResult/HumanResult';
 
 export default function Home() {
   useEffect(() => {
@@ -54,6 +55,8 @@ export default function Home() {
       {/* mục 5 */}
       {/* <Experiment /> */}
       <SensorPlatform />
+
+      <HumanResult />
 
       <RelatedLink />
       <License />
