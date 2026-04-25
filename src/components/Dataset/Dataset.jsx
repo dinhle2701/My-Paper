@@ -47,8 +47,6 @@ const datasets = [
             `${base}/datasets/Counting People IR/cv/three-people.mp4`,
             `${base}/datasets/Counting People IR/cv/four-people.mp4`,
             `${base}/datasets/Counting People IR/cv/five-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/six-people.mp4`,
-            `${base}/datasets/Counting People IR/cv/seven-people.mp4`,
         ],
         csi: [
             `${base}/datasets/Counting People IR/csi/csi_0people.mp4`,
@@ -57,8 +55,6 @@ const datasets = [
             `${base}/datasets/Counting People IR/csi/csi_3people.mp4`,
             `${base}/datasets/Counting People IR/csi/csi_4people.mp4`,
             `${base}/datasets/Counting People IR/csi/csi_5people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_6people.mp4`,
-            `${base}/datasets/Counting People IR/csi/csi_7people.mp4`,
         ],
     },
 
