@@ -36,10 +36,24 @@ const Header = () => {
 
                 <div className="link-related mt-12 mb-16 flex flex-wrap justify-center gap-4">
                     {[
-                        { label: "Paper", icon: <FaRegFilePdf /> },
-                        { label: "arXiv", icon: <SiArxiv /> },
-                        { label: "Video", icon: <FaYoutube /> },
-                        { label: "Data", icon: <FaRegImages /> },
+                        {
+                            label: "Paper",
+                            icon: <FaRegFilePdf />,
+
+                        },
+                        {
+                            label: "arXiv",
+                            icon: <SiArxiv />,
+                        },
+                        {
+                            label: "Video",
+                            icon: <FaYoutube />,
+                            href: "https://youtu.be/7X9_TIlNBb0"
+                        },
+                        {
+                            label: "Data",
+                            icon: <FaRegImages />,
+                        },
                     ].map((item, index) => (
                         <button
                             key={index}
