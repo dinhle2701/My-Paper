@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { datasets } from "@/data/datasets"
 
 
@@ -11,8 +11,41 @@ const HumanResult = () => {
     // reset dropdown khi đổi tab
     useEffect(() => {
         setSelectedIndex(0)
+        setCurrentTime(0)
     }, [activeTab])
 
+    const cvRef = useRef(null)
+    const csiRef = useRef(null)
+
+    const [duration, setDuration] = useState(0)
+    const [currentTime, setCurrentTime] = useState(0)
+
+    const handleLoadedMetadata = () => {
+        if (cvRef.current) {
+            setDuration(cvRef.current.duration)
+        }
+    }
+
+    const lastUpdateRef = useRef(0)
+
+    const handleSeek = (e) => {
+        const now = performance.now()
+
+        // 🔥 chỉ update mỗi 16ms (~60fps)
+        if (now - lastUpdateRef.current < 16) return
+        lastUpdateRef.current = now
+
+        const time = Number(e.target.value)
+        setCurrentTime(time)
+
+        if (cvRef.current) {
+            cvRef.current.currentTime = time
+        }
+
+        if (csiRef.current) {
+            csiRef.current.currentTime = time
+        }
+    }
     return (
         <div className="dataset container-size text-black">
             <h2 className="text-2xl font-bold mt-12 text-center">
@@ -67,11 +100,11 @@ const HumanResult = () => {
                             <div className="text-center">
                                 <h4 className="font-bold mb-3">CV</h4>
                                 <video
+                                    ref={cvRef}
                                     src={current.cv[selectedIndex]}
-                                    autoPlay
                                     muted
-                                    loop
                                     playsInline
+                                    onLoadedMetadata={handleLoadedMetadata}
                                     className="w-full h-[320px] object-cover rounded-lg shadow bg-black"
                                 />
                             </div>
@@ -80,15 +113,27 @@ const HumanResult = () => {
                             <div className="text-center">
                                 <h4 className="font-bold mb-3">CSI</h4>
                                 <video
+                                    ref={csiRef}
                                     src={current.csi[selectedIndex]}
-                                    autoPlay
                                     muted
-                                    loop
                                     playsInline
+                                    onLoadedMetadata={handleLoadedMetadata}
                                     className="w-full h-[320px] object-cover rounded-lg shadow bg-black"
                                 />
                             </div>
 
+                        </div>
+
+                        <div className="w-full max-w-[800px] mt-4">
+                            <input
+                                type="range"
+                                min={0}
+                                max={duration}
+                                step={0.01}
+                                value={currentTime}
+                                onInput={handleSeek}
+                                className="w-full cursor-pointer"
+                            />
                         </div>
                     </div>
                 )}
