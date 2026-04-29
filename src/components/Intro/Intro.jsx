@@ -2,7 +2,7 @@ import React from 'react'
 
 const Intro = () => {
     return (
-        <div className='intro container-size mt-18'>
+        <div className='intro container-size mt-18' id='intro'>
             <h2 className='text-2xl font-bold my-8 mt-18 text-center text-black'>Introduction</h2>
             <p>
                 Visualization of the Data of each modality and their corresponding estimations.

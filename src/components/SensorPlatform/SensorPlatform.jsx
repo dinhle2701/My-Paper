@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import { datasets } from '@/data/datasets'
+import Fusion from "../Fusion/Fusion"
 
 const SensorPlatform = () => {
     const [activeTab, setActiveTab] = useState(1)
@@ -14,8 +15,12 @@ const SensorPlatform = () => {
 
 
     return (
-        <div className='sensor-platform container-size mt-12'>
+        <div className='sensor-platform container-size mt-12' id="sensor_platform">
             <h2 className='text-2xl text-black font-bold'>Sensor Platform</h2>
+
+            {/* Fusion */}
+            {/* <Fusion /> */}
+
             <h3 className='text-lg text-black font-bold mt-6 mb-16'>Experimental Setup</h3>
 
             {/* Tabs */}

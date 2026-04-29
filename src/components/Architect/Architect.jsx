@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Methodology = () => {
+const Architect = () => {
     return (
-        <div className='methodology container-size mt-12'>
-            <h2 className='text-2xl text-black font-bold mt-12'>Methodology</h2>
+        <div className='methodology container-size mt-12' id='architect'>
+            <h2 className='text-2xl text-black font-bold mt-12'>WiVi32-Fusion Architect</h2>
 
             <div className="overall-architecture">
                 <img src="/PRoFENCH/image/overall-architecture.png" alt="overall-architecture" className="mx-auto mt-8" />
@@ -15,4 +15,4 @@ const Methodology = () => {
     )
 }
 
-export default Methodology
+export default Architect

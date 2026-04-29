@@ -2,7 +2,7 @@ import React from 'react'
 
 const Citation = () => {
     return (
-        <div className='citation container-size mt-12 text-black'>
+        <div className='citation container-size mt-12 text-black' id='citation'>
             <h2 className='text-2xl font-bold text-black'>Citation</h2>
             <p className='mt-8'></p>
         </div>

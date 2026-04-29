@@ -47,7 +47,7 @@ const HumanResult = () => {
         }
     }
     return (
-        <div className="dataset container-size text-black">
+        <div className="dataset container-size text-black" id="human_result">
             <h2 className="text-2xl font-bold mt-12 text-center">
                 Human Pose Estimation Result
             </h2>

@@ -48,7 +48,7 @@ const DatasetTabs = () => {
     }, [activeTab])
 
     return (
-        <div className="dataset container-size text-black">
+        <div className="dataset container-size text-black" id="datasetTabs">
             <h2 className="text-2xl font-bold mt-12 text-center">Dataset</h2>
 
             <div className="max-w-[1500px] mx-auto mt-10">
