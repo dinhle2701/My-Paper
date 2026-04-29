@@ -17,7 +17,7 @@ export const datasets = [
             "7 VOLUNTEERS",
         ],
         cv: [
-            `${base}/datasets/Counting People RGB/cv/1_people.mp4`,
+            `${base}/datasets/Counting People RGB/cv/0_people.mp4`,
             `${base}/datasets/Counting People RGB/cv/1_people.mp4`,
             `${base}/datasets/Counting People RGB/cv/2_people.mp4`,
             `${base}/datasets/Counting People RGB/cv/3_people.mp4`,
