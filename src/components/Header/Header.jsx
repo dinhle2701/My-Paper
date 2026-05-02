@@ -36,16 +36,16 @@ const Header = () => {
 
                 <div className="link-related mt-12 mb-16 flex flex-wrap justify-center gap-4">
                     {[
-                        {
-                            label: "Paper",
-                            icon: <FaRegFilePdf />,
-                            href: "",
-                        },
-                        {
-                            label: "arXiv",
-                            icon: <SiArxiv />,
-                            href: "",
-                        },
+                        // {
+                        //     label: "Paper",
+                        //     icon: <FaRegFilePdf />,
+                        //     href: "",
+                        // },
+                        // {
+                        //     label: "arXiv",
+                        //     icon: <SiArxiv />,
+                        //     href: "",
+                        // },
                         {
                             label: "Video",
                             icon: <FaYoutube />,
@@ -74,7 +74,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="credibility">
-                <span>Awaiting acceptance from Ad Hoc Networks journal.</span>
+                {/* <span>Awaiting acceptance from Ad Hoc Networks journal.</span> */}
             </div>
         </div>
     )

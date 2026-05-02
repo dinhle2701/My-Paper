@@ -41,26 +41,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Header />
+
+      {/* Introduction */}
       <Intro />
+
+      {/* Abstract */}
       <Abstract />
 
-      {/* Mục 1 */}
+      {/* Mục 1 - Datasets */}
       <DatasetTabs />
 
-
-      {/* Mục 2 */}
+      {/* Mục 2 - Fusion Strategy */}
       <Fusion />
 
-      {/* Mục 3 - methodology*/}
+      {/* Mục 3 - WiVi32-Fusion Architect */}
       <Architect />
 
-      {/* Mục 4 */}
+      {/* Mục 4 - Sensor Platform */}
       <SensorPlatform />
 
-      {/* Mục 5 */}
+      {/* Mục 5 - We provide the visualization human counting in the frame level */}
       <HumanResult />
 
-      {/* Mục 6 */}
+      {/* Mục 6 - Related Links */}
       <RelatedLink />
 
       {/* Mục 7 */}

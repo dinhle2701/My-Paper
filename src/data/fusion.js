@@ -1,4 +1,4 @@
-const base = "/PRoFENCH"
+const base = "https://profench-paper-s3-bucket.s3.us-east-1.amazonaws.com/public"
 
 export const fusion = [
     {
